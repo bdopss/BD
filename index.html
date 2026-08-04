@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#03050a" />
+  <title>Basata Operation Center</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="animated-bg" aria-hidden="true">
+    <span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span>
+    <div class="grid-glow"></div>
+  </div>
+
+  <main class="page-shell">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Basata Home">
+        <img src="images/EP-removebg-preview.png" alt="Basata Logo" />
+      </a>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">Basata Pay</p>
+      <h1>Basata Operation Center</h1>
+      <p class="hero-copy">Choose a service to open its Google Form or Google Sheet.</p>
+    </section>
+
+    <section class="requests-section" aria-label="Operation requests">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">REQUESTS HUB</span>
+          <h2>Operations Requests</h2>
+        </div>
+        <span class="section-count" id="serviceCount"></span>
+      </div>
+
+      <!--
+        ADDING A NEW BOX:
+        Copy one .service-card block below and change:
+        1) data-title
+        2) data-form-url
+        3) data-sheet-url
+        The responsive grid will place it automatically with the same style.
+      -->
+      <div class="services-grid" id="servicesGrid">
+
+        <article class="service-card" data-title="Cash Center" data-form-url="PASTE_GOOGLE_FORM_LINK_HERE" data-sheet-url="PASTE_GOOGLE_SHEET_LINK_HERE">
+          <div class="service-top"><span class="service-number">02</span></div>
+          <h3>Cash Center</h3>
+          <p>Access the Cash Center form and view submitted records</p>
+          <div class="service-actions">
+            <a class="action-btn form-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeSsaKSDG4C-00vptYSdOldKfhyvEiwJ_ewIp96dIxi3pWcng/viewform?usp=publish-editor"><span>Google Form</span></a>
+            <a class="action-btn sheet-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1chlVd3EzMnhmlwpoOZtheZnK803fHibrrYD3g15AlFU/edit?resourcekey=&gid=1962754621#gid=1962754621"><span>Google Sheet</span></a>
+          </div>
+        </article>
+
+        <article class="service-card" data-title="Deactivate Template" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSd1dWlRO0CTVV-2u0WBkxXtkaUfkrjkR7uFC6NnbuyBLOuNmg/viewform?usp=header" data-sheet-url="https://docs.google.com/spreadsheets/d/1oWiWtLvOj8t4UJLnCk7oboF8Hozf-vfDHc0IGK-NK2w/edit?gid=1030177456#gid=1030177456">
+          <div class="service-top"><span class="service-number">03</span></div>
+          <h3>Deactivate Template</h3>
+          <p>Submit a Deactivate Template request and view submitted records</p>
+          <div class="service-actions">
+            <a class="action-btn form-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSd1dWlRO0CTVV-2u0WBkxXtkaUfkrjkR7uFC6NnbuyBLOuNmg/viewform?usp=header"><span>Google Form</span></a>
+            <a class="action-btn sheet-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1oWiWtLvOj8t4UJLnCk7oboF8Hozf-vfDHc0IGK-NK2w/edit?resourcekey=&gid=1030177456#gid=1030177456"><span>Google Sheet</span></a>
+          </div>
+        </article>
+
+        <article class="service-card" data-title="Settlement Method Change" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSex92l0f0P0Hk-r-aLyUmaysn7mrUE2QguJHuWJOZX4uLJ-Ng/viewform?usp=dialog" data-sheet-url="PASTE_GOOGLE_SHEET_LINK_HERE">
+          <div class="service-top"><span class="service-number">04</span></div>
+          <h3>Add Bank</h3>
+          <p>Submit a new Bank request and view submitted records</p>
+          <div class="service-actions">
+            <a class="action-btn form-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSev7oXnK1ygPG1M0J_D5KsdOdPipZkb1XIvk5jf38rBmf9oWQ/viewform?usp=publish-editor"><span>Google Form</span></a>
+            <a class="action-btn sheet-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1JSwX8g-CgIxJaf3NumR_3DcIrM4ii9k1QwY9c6rM-xE/edit?resourcekey=&gid=877596643#gid=877596643"><span>Google Sheet</span></a>
+          </div>
+        </article>
+
+        <article class="service-card" data-title="DVR" data-form-url="https://docs.google.com/forms/d/e/1FAIpQLSeK65GTqZzu2-VSiDKX2wiholYWx3WvFdqlW6QL1_j0QZ2D3g/viewform?usp=header" data-sheet-url="PASTE_GOOGLE_SHEET_LINK_HERE">
+          <div class="service-top"><span class="service-number">06</span></div>
+          <h3>Vodafone cash Key & SME Form</h3>
+          <p>Submit Vodafone Cash Key & SME requests and view submitted records</p>
+          <div class="service-actions">
+            <a class="action-btn form-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScBdXglmRKko2tsZYZqeDan8tb95ePjBDj0dfi7aC8fiCopTA/viewform?usp=publish-editor"><span>Google Form</span></a>
+            <a class="action-btn sheet-btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/spreadsheets/d/1PQznYfyVPabweglU8phvU7gkBm5bow8WWJyyBadkb9U/edit?resourcekey=&gid=2081282240#gid=2081282240"><span>Google Sheet</span></a>
+          </div>
+        </article>
+
+    </section>
+
+    <footer class="footer">
+      <p>Basata Pay · Operation Center</p>
+    </footer>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    const pointer = { x: innerWidth / 2, y: innerHeight / 2 };
+    let particles = [];
+
+    document.querySelectorAll('.service-card').forEach((card, index) => {
+      card.querySelector('.service-number').textContent = String(index + 1).padStart(2, '0');
+      const form = card.querySelector('.form-btn');
+      const sheet = card.querySelector('.sheet-btn');
+      const setLink = (link, url) => {
+  const href=(link.getAttribute("href")||"").trim();
+  const dataUrl=(url||"").trim();
+  const finalUrl=dataUrl && !dataUrl.includes("PASTE_GOOGLE") ? dataUrl : (href && !href.includes("PASTE_GOOGLE")?href:"");
+  if(finalUrl){link.href=finalUrl;link.classList.remove("is-placeholder");link.removeAttribute("aria-disabled");link.target="_blank";link.rel="noopener noreferrer";}
+  else{link.removeAttribute("href");link.classList.add("is-placeholder");link.setAttribute("aria-disabled","true");link.addEventListener("click",e=>e.preventDefault());}
+};
+      setLink(form, card.dataset.formUrl);
+      setLink(sheet, card.dataset.sheetUrl);
+    });
+    document.getElementById('serviceCount').textContent = document.querySelectorAll('.service-card').length + ' Services';
+
+    function resizeCanvas() {
+      canvas.width = innerWidth * devicePixelRatio; canvas.height = innerHeight * devicePixelRatio;
+      canvas.style.width = innerWidth + 'px'; canvas.style.height = innerHeight + 'px';
+      ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+      const count = Math.min(80, Math.floor((innerWidth * innerHeight) / 15000));
+      particles = Array.from({length:count},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.5+.6}));
+    }
+    addEventListener('pointermove', e => {
+      pointer.x=e.clientX; pointer.y=e.clientY;
+      root.style.setProperty('--mouse-x', (e.clientX/innerWidth*100)+'%');
+      root.style.setProperty('--mouse-y', (e.clientY/innerHeight*100)+'%');
+    });
+    function animate() {
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      particles.forEach((p,i)=>{
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0||p.x>innerWidth)p.vx*=-1;
+        if(p.y<0||p.y>innerHeight)p.vy*=-1;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,.38)'; ctx.fill();
+        for(let j=i+1;j<particles.length;j++){
+          const q=particles[j], dx=p.x-q.x, dy=p.y-q.y, d=Math.hypot(dx,dy);
+          if(d<105){ctx.strokeStyle=`rgba(237,28,46,${.12*(1-d/105)})`;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();}
+        }
+      });
+      requestAnimationFrame(animate);
+    }
+    addEventListener('resize',resizeCanvas); resizeCanvas(); animate();
+  </script>
+</body>
+</html>
